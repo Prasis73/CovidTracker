@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:id="@+id/linearLayoutTotalCountries"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:background="@color/colorPrimaryDark">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTotalCountries"
+            tools:text="121 countries"
+            android:textColor="#fff"
+            android:textSize="24sp"
+            style="@style/TotalFontStyle"/>
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/linearLayoutTotalCountries"
+        android:id="@+id/rvCovidCountry"
+        tools:listitem="@layout/item_list_covid_country"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+<ProgressBar
+    android:id="@+id/progress_circular_country"
+    android:layout_centerInParent="true"
+    android:indeterminateDrawable="@drawable/progress"
+    android:indeterminate="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    />
+
+
+</RelativeLayout>
